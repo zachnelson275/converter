@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Upload an image to convert:</h3>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/png, image/jpeg" required />
+      <br><br>
+      <select name="palette" required>
+        <option value="cmyk">CMYK</option>
+        <option value="pantone_coated">Pantone Solid Coated V5</option>
+        <option value="pantone_uncoated">Pantone Solid Uncoated V5</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Convert to SVG" />
+    </form>
+  </body>
+</html>
