@@ -21,7 +21,6 @@ def allowed_file(filename):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        palette = request.form.get("palette")
         file = request.files["image"]
 
         if file and allowed_file(file.filename):
@@ -30,7 +29,7 @@ def index():
             file.save(filepath)
 
             # 1. Convert image to color masks
-            masks, color_map = convert_image_to_masks(filepath, palette)
+            masks, color_map = convert_image_to_masks(filepath)
 
             # 2. Vectorize masks into SVG paths
             paths = vectorize_masks_to_svg(masks)
