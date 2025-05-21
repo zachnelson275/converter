@@ -1,5 +1,5 @@
-Flask
-Pillow
-numpy
-svgwrite
-scikit-image
+Flask==2.3.2
+numpy==1.26.4
+Pillow==10.3.0
+svgwrite==1.4.3
+scikit-learn==1.4.2
