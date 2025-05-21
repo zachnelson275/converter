@@ -1,10 +1,5 @@
 services:
   - type: web
     name: svg-converter
-    env: python
-    buildCommand: |
-      apt-get update
-      apt-get install -y potrace
-      pip install -r requirements.txt
-    startCommand: gunicorn app:app
-
+    env: docker
+    plan: free
