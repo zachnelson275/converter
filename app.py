@@ -29,7 +29,7 @@ def index():
             file.save(filepath)
 
             # 1. Convert image to color masks
-            masks, color_map = convert_image_to_masks(filepath)
+            masks, color_map = convert_image_to_masks(filepath, num_colors=8)
 
             # 2. Vectorize masks into SVG paths
             paths = vectorize_masks_to_svg(masks)
